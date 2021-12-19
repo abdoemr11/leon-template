@@ -5,29 +5,110 @@
 body {
 	font-family: "Work Sans", sans-serif;
 }
-.parent {
-	background-color: #eee;
-}
 .container {
-	background-color: #555;
-	margin-left: auto; 
+	margin-left: auto;
 	margin-right: auto;
 	padding-left : 15px;
 	padding-right: 15px;
 }
+/*small*/
 @media(min-width: 768px) {
 	.container {
 		width: 750px;
 	}
 }
+/*medium*/
 @media(min-width: 992px) {
 	.container {
 		width: 970px;
 	}
 }
+/*large*/
 @media(min-width: 1200px) {
 	.container {
 		width: 1170px;
 	}
 }
 /*End Global rule*/
+/*start Header*/
+.header {
+	padding: 20px;
+}
+.header .container {
+	display:flex;
+	justify-content: space-between;
+
+}
+.header  .logo {
+	width: 60px;
+	/*height: 60px;*/
+}
+.header .container .links  {
+	position: relative;
+
+
+}
+.header .links:hover .burger-bar span:nth-child(2) {
+	width: 100%;
+}
+.header .links .burger-bar {
+
+	width: 30px;
+	display: flex;
+	flex-wrap : wrap;
+	justify-content: flex-end;
+	margin: 0;
+
+}
+.header .links .burger-bar span {
+	background-color: #222;
+	height: 3px;
+	margin-bottom: 5px;
+
+}
+.header .links .burger-bar span:first-child{
+	width:100%
+}
+.header .links .burger-bar span:nth-child(2){
+	width:60%;
+	transition-duration: 0.3s;
+}
+.header .links .burger-bar span:last-child{
+	width:100%
+}
+.header .links:hover ul {
+	display: block;
+}
+.header .links ul {
+	position:absolute;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	top: calc(100% + 10px);
+	background-color: #f6f6f6;
+	width: 120px;
+	display: none;
+}
+.header .links ul::before {
+	content: "";
+	position: absolute;
+	border-width: 10px;
+	border-color: transparent transparent #f6f6f6 transparent;
+	border-style: solid;
+	right: 5px;
+	top:-20px;
+}
+.header .links ul li {
+	padding: 10px;
+}
+.header .links ul li:not(:last-child) {
+	border-bottom: 1px solid #ddd;
+}
+.header .links ul a {
+	text-decoration: none;
+	color: #222222;
+	display: block;
+
+}
+/*End Header*/
